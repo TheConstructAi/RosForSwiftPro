@@ -19,7 +19,7 @@
 #define MATH_UPPER_ARM 			158.81
 
 #define ANGLE_NUM 4
-float motor_angle[ANGLE_NUM] = {90.0, 90.0, 0.0, 90.0};
+float motor_angle[ANGLE_NUM] = {90.0, 120.0, 30.0, 90.0};
 
 /* 
  * Description: forward kinematics of swift pro
