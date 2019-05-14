@@ -2,7 +2,7 @@
 This is ROS package for swift pro started by ufactory team.
 These packages support Moveit!, RViz and serial communication for swift pro.
 
-## 1. Download and install
+# Download and install
 Download ros packages for uarm swift pro
 ```bash
 cd ~/catkin_ws/src
@@ -25,29 +25,25 @@ Compile
 catkin_make
 ```
 
-## 2. Set up enviroment
-Source all setup.bash files to set up your enviroment.
+Load
 ```bash
-# System configure ROS environment variables automatically every time you open a ternimal
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+source ~/catkin_ws/devel/setup.bash
 ```
 
-## 3. Simulation
+# Simulation
 Connect your swift/swiftpro to computer and get USB permission to access uArm
 ```bash
-$ sudo chmod 666 /dev/ttyACM0
+sudo chmod 666 /dev/ttyACM0
 ```
 
-### 3.1 Display mode: Get data from swiftpro
+## Display mode: Get data from swiftpro
 Get data from serial and simulate swiftpro in RViz.
 ```bash
 roslaunch swiftpro pro_display.launch
 ```
 right now, you can drag your swiftpro and it will simulate in Rviz.
 
-### 3.2 Control Mode: Send data to swiftpro
+## Control Mode: Send data to swiftpro
 Connect swiftpro, send data though serial.
 ```bash
 roslaunch swiftpro pro_control.launch
@@ -58,25 +54,7 @@ roslaunch pro_moveit_config demo.launch
 ```
 right now, you can do trajectory planning or grasping in moveIt!.
 
-### 3.3 Display mode: Get data from swift
-Get data from serial and simulate swift in RViz.
-```bash
-roslaunch swiftpro swift_display.launch
-```
-right now, you can drag your swift and it will simulate in Rviz.
-
-### 3.4 Control Mode: Send data to swift
-Connect swift, send data though serial.
-```bash
-roslaunch swiftpro swift_control.launch
-```
-Open another ternimal to get joint angles from Moveit!.
-```bash
-roslaunch swift_moveit_config demo.launch
-```
-right now, you can do trajectory planning or grasping in moveIt!.
-
-### 3.5 About message
+# Message example
 SwiftproState.msg: includes all data about swiftpro
 ```
 float64 motor_angle1
