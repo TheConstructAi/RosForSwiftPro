@@ -5,24 +5,24 @@ These packages support Moveit!, RViz and serial communication for swift pro.
 ## 1. Download and install
 Download ros packages for uarm swift pro
 ```bash
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/asukiaaa/RosForSwiftPro.git
+cd ~/catkin_ws/src
+git clone https://github.com/asukiaaa/RosForSwiftPro.git
 ```
 
 Install dependencies using rosdep
 If running the rosdep for the first time start by running:
-```
+```bash
 sudo rosdep init
 rosdep update
 ```
 Then install all dependencies using:
-```
+```bash
 rosdep install --from-paths ./ -i
 ```
 
 Compile
 ```bash
-$ catkin_make
+catkin_make
 ```
 
 ## 2. Set up enviroment
@@ -78,7 +78,7 @@ right now, you can do trajectory planning or grasping in moveIt!.
 
 ### 3.5 About message
 SwiftproState.msg: includes all data about swiftpro
-```bash
+```
 float64 motor_angle1
 float64 motor_angle2
 float64 motor_angle3
@@ -91,16 +91,16 @@ uint8   swiftpro_status
 uint8   gripper
 ```
 position.msg: includes x, y, z information(mm)
-```bash
+```
 float64 x
 float64 y
 float64 z
 ```
 angle4th.msg: 4th motor angle(degree)
-```bash
+```
 float64 angle4th
 ```
 status.msg: work if 1; otherwise 0
-```bash
+```
 uint8 status
 ```
