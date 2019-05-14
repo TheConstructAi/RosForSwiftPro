@@ -1,22 +1,21 @@
-# SwiftAndProForROS
-This is the swift and swiftpro ROS package designed by Roger Cui(roger@ufactory.cc) and David Long (xiaokun.long@ufactory.cc).
-These packages support Moveit!, RViz and serial communication with swift and swiftpro.
+# RosForSwiftPro
+This is ROS package for swift pro started by ufactory team.
+These packages support Moveit!, RViz and serial communication for swift pro.
 
 ## 1. Download and install
 Download ros packages for uarm swift pro
 ```bash
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/uArm-Developer/RosForSwiftAndSwiftPro.git
+$ git clone https://github.com/asukiaaa/RosForSwiftPro.git
 ```
-then manually copy package folders *swiftpro* *swift_moveit_config* and *pro_moveit_config* into a catkin_ws/src.
 
 Install dependencies using rosdep
-If running the rosdep for the first time start by running: 
+If running the rosdep for the first time start by running:
 ```
 sudo rosdep init
 rosdep update
 ```
-Then isntall all dependencies using:
+Then install all dependencies using:
 ```
 rosdep install --from-paths ./ -i
 ```
@@ -77,10 +76,7 @@ roslaunch swift_moveit_config demo.launch
 ```
 right now, you can do trajectory planning or grasping in moveIt!.
 
-### 3.5 About nodes and topics
-<img src="http://obmqyor62.bkt.clouddn.com/swift.jpg" width = "780" height = "350" />
-
-### 3.6 About message
+### 3.5 About message
 SwiftproState.msg: includes all data about swiftpro
 ```bash
 float64 motor_angle1
