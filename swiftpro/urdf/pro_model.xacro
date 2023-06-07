@@ -2,12 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="swiftpro" >
 
 <link name="Base">
-	<inertial>
-		<origin xyz="0.010476 0.000747 0.035226" rpy="0 0 0"/>
-		<mass value="1.886"/>
-		<inertia ixx="0.001196219" ixy="-0.000029358" ixz="0.000014859" 
-				 iyy="0.001147997" iyz="0.000016274"  izz="0.001425617"/>
-	</inertial>
+
 	<visual>
 		<geometry>
 			<mesh filename="package://swiftpro/urdf/pro_links/Base.STL"/>
@@ -272,7 +267,7 @@
 	</inertial>
 	<visual>
 		<geometry>
-			<mesh filename="package://swiftpro/urdf/pro_links/GripperPart.STL"/>
+			<mesh filename="package://swiftpro/urdf/pro_links/Suction.STL"/>
 		</geometry>
 		<origin xyz = "-0.22201 0 -0.24651" rpy = "0 0 0" />
 		<material name = "">
